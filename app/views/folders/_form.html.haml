@@ -1,0 +1,31 @@
+:javascript
+  jQuery(document).ready(function() {
+    jQuery("#tree").checkboxTree({
+      collapsedarrow: "/images/checkboxtree/img-arrow-collapsed.gif",
+      expandedarrow: "/images/checkboxtree/img-arrow-expanded.gif",
+      blankarrow: "/images/checkboxtree/img-arrow-blank.gif",
+      checkchildren: false,
+      checkparents: false
+    });
+  });
+
+= form_for @folder, :validate => true do |f|
+  .field
+    = f.label :name, "フォルダ名"
+    .input
+      = f.text_field :name
+  .field
+    = f.label :group, "グループ(ユーザー)"
+    .input
+      %ul#tree.unorderedlisttree
+        - Group.all.each do |group|
+          %li
+            = check_box_tag "folder[group_ids][]", group.id, group.folders.include?(@folder)
+            %label= group.name
+            %ul
+              - group.users.each do |user|
+                %li
+                  = check_box_tag "folder[user_ids][]", user.id, user.folders.include?(@folder)
+                  %label= user.name
+  .actions
+    = f.submit '保存'

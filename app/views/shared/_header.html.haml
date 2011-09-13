@@ -1,0 +1,12 @@
+%div#header
+  %h1#logo= link_to "Luckey", root_url, {:tabindex => "-1"}
+  - if current_user
+    %div#navi
+      %ul.menu
+        %li= link_to image_tag('/images/nav_home.png', :alt => "ホーム"), root_url, {:tabindex => "-1", :title => "ホーム"}
+        %li= link_to image_tag('/images/nav_folder.png', :alt => "フォルダ"), folders_url, {:tabindex => "-1", :title => "フォルダ"}
+        %li= link_to image_tag('/images/nav_item.png', :alt => "アイテム"), items_url, {:tabindex => "-1", :title => "アイテム"}
+        %li= link_to image_tag('/images/nav_group.png', :alt => "グループ"), groups_url, {:tabindex => "-1", :title => "グループ"}
+        %li= link_to image_tag('/images/nav_user.png', :alt => "ユーザー"), users_url, {:tabindex => "-1", :title => "ユーザー"}
+        %li= link_to image_tag('/images/nav_logout.png', :alt => "ログアウト"), logout_url, :method => :delete, :title => "ログアウト"
+        %li#usrName= current_user.login

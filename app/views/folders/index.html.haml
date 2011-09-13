@@ -1,0 +1,73 @@
+:javascript
+  $(document).ready(function() {
+    $("#jstable").dataTable({
+      "bJQueryUI":true,
+      "sPaginationType":"full_numbers",
+      "bStateSave": true
+    });
+    $("#tabs").tabs({
+      cookie:{
+        expires: 7
+      }
+    });
+  });
+
+%h2
+  %span フォルダ
+
+%div.innerContent
+  %div#tabs
+    %ul
+      %li
+        %a{:href => "#folderList", :title => "アイコン表示"}
+          %img{:src => "/images/grid.png"}
+      %li
+        %a{:href => "#dtTable", :title => "リスト表示"}
+          %img{:src => "/images/list.png"}
+
+    %div#dtTable
+      %table#jstable.display{:cellpadding => "0", :cellspacing => "0", :border => "0"}
+        %thead
+          %tr
+            %th フォルダ名
+            %th アイテム数
+            %th グループ
+            %th 個別ユーザー
+            %th
+            %th
+        %tbody
+          - @folders.each do |folder|
+            %tr
+              %td= link_to folder.name, folder
+              %td.center= folder.items.count
+              %td
+                - folder.groups.each do |group|
+                  = link_to group.name, group
+              %td
+                - folder.users.each do |user|
+                  = user.name
+              - if current_user.role < 2
+                %td.center= link_to image_tag('/images/edit_folder.png'), edit_folder_path(folder)
+                %td.center= link_to image_tag('/images/del_folder.png'), folder, :confirm => "Are you sure?", :method => :delete
+              - else
+                %td.center
+                  ー
+                %td.center
+                  ー
+      %br
+    %div#folderList
+      - @folders.each do |folder|
+        %div.fBlock
+          %span.folder= link_to folder.name, folder
+          %div.itemCnt
+            = link_to image_tag('/images/nav_item.png', :width => "12", :height => "12"), folder
+            %span.num= folder.items.count
+          %div.btnList
+            - if current_user.role < 2
+              = link_to image_tag('/images/edit_folder.png', :width => "12", :height => "12"), edit_folder_path(folder)
+              = link_to image_tag('/images/del_folder.png', :width => "12", :height => "12"), folder, :confirm => "Are you sure?", :method => :delete
+
+      %div.clear
+
+- if current_user.role < 2
+  = link_to image_tag('/images/add_folder.png'), new_folder_path, {:title => "新規作成"}

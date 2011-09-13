@@ -1,0 +1,37 @@
+:javascript
+  $(document).ready(function() {
+    $("#jstable").dataTable({
+      "bJQueryUI":true,
+      "sPaginationType":"full_numbers",
+      "bStateSave": true
+    });
+  });
+
+%h2
+  %span お気に入り
+
+%div.innerContent
+  %table#jstable.display{:cellpadding => "0", :cellspacing => "0", :border => "0"}
+    %thead
+      %tr
+        %th アイテム名
+        %th パスワード
+        %th アカウント
+        %th URL
+        %th フォルダ
+        %th
+        %th
+        %th
+    %tbody
+      - @favorites.each do |favorite|
+        %tr
+          %td= favorite.item.name
+          %td= favorite.item.decrypt_password
+          %td= favorite.item.account
+          %td= favorite.item.url
+          %td= link_to favorite.item.folder.name, favorite.item.folder
+          %td.center= link_to image_tag('/images/dislike.png'), favorites_url(:item_id => favorite.item), :method => :delete, :confirm => 'Are you sure?',:title => "お気に入りから外す"
+          %td.center= link_to image_tag('/images/edit.png'), edit_item_path(favorite.item), :title => "編集"
+          %td.center= link_to image_tag('/images/del_item.png'), favorite.item, :confirm => 'Are you sure?', :method => :delete, :title => "削除"
+
+%br

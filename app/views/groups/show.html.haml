@@ -1,0 +1,12 @@
+%h2
+  %span= @group.name
+
+%div.innerContent
+  %ul#userList
+    - @group.users.each do |user|
+      - if current_user.role == 0
+        %li= link_to user.name, edit_user_path(user)
+      - else
+        %li= user.name
+  %br
+  = link_to image_tag('/images/back.png'), groups_url, {:title => "一覧に戻る"}

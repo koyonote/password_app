@@ -1,0 +1,17 @@
+ja:
+  errors:
+    format: "%{attribute}%{message}"
+
+    messages: &errors_messages
+      invalid: "不正な値です"
+      exclusion: "すでにデータが存在します"
+      confirmation: "パスワードが一致しません"
+      accepted: "受諾してください"
+      empty: "必須項目です"
+      blank: "必須項目です"
+
+  activerecord:
+    errors:
+      messages:
+        taken: "すでに使われています"
+        record_invalid: "バリデーションに失敗しました"

@@ -1,0 +1,34 @@
+= form_for @user, :validate => true do |f|
+  .field
+    = f.label :login, "ログインID"
+    .input
+      = f.text_field :login
+  .field
+    = f.label :password, "パスワード"
+    .input
+      = f.password_field :password
+  .field
+    = f.label :password_confirmation, "パスワード確認"
+    .input
+      = f.password_field :password_confirmation
+  .field
+    = f.label :group, "所属グループ"
+    .input
+      - Group.all.each do |group|
+        = check_box_tag "user[group_ids][]", group.id, group.users.include?(@user)
+        = group.name
+  .field
+    = f.label :name, "名前"
+    .input
+      = f.text_field :name
+  .field
+    = f.label :role, "ロール"
+    .input
+      = f.radio_button "role", 0
+      システム管理者
+      = f.radio_button "role", 1
+      マネージャー以上
+      = f.radio_button "role", 2
+      社員・その他
+  .actions
+    = f.submit 'Save'

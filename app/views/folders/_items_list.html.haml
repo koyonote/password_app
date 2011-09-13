@@ -1,0 +1,33 @@
+:javascript
+  $(document).ready(function() {
+    $("#example").dataTable({
+      "bJQueryUI":true,
+      "sPaginationType":"full_numbers",
+      "bStateSave": true
+    })
+  });
+
+%div#demo
+  %table#example.display{:cellpadding => "0", :cellspacing => "0", :border => "0"}
+    %thead
+      %tr
+        %th アイテム名
+        %th アカウント
+        %th パスワード
+        %th URL
+        %th
+        %th
+        %th
+    %tbody
+      - items.each do |item|
+        %tr
+          %td= item.name
+          %td= item.account
+          %td= item.decrypt_password
+          %td= item.url
+          %td.center= link_to image_tag('/images/like.png'), favorites_url(:item_id => item), :method => :post, :title => "お気に入りに追加する"
+          %td.center= link_to image_tag('/images/edit.png'), edit_item_path(item), :title => "編集"
+          %td.center= link_to image_tag('/images/del.png'), item, :confirm => 'Are you sure?', :method => :delete, :title => "削除"
+
+%br
+

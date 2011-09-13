@@ -1,0 +1,13 @@
+%p{:style => "color:green; padding-bottom:5px"}= flash[:alert]
+%div#loginForm
+  = form_tag do
+    %div.field
+      = label_tag :login, "ログインID："
+      %br
+      = text_field_tag :login
+    %div.field
+      = label_tag :password, "パスワード："
+      %br
+      = password_field_tag :password
+    %div.actions
+      = submit_tag "ログイン"

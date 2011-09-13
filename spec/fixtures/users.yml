@@ -1,0 +1,7 @@
+one:
+  id: 1
+  login: MyString
+  hashed_password: MyString
+  salt: MyString
+  name: MyString
+  role: 0

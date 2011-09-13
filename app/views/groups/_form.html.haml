@@ -1,0 +1,13 @@
+= form_for @group, :validate => true, :html => {:class => "jqtransform"} do |f|
+  .field
+    = f.label :name, "グループ名"
+    .input
+      = f.text_field :name
+  .field
+    = f.label :user, "ユーザー"
+    .input
+      - User.all.each do |user|
+        = check_box_tag "group[user_ids][]", user.id, user.groups.include?(@group)
+        = user.name
+  .actions
+    = f.submit '保存'

@@ -1,0 +1,23 @@
+= form_for @item, :validate => true do |f|
+  .field
+    = f.label :folder, "フォルダ"
+    .input
+      = f.select "folder_id", Folder.all.collect {|f| [f.name, f.id]}, {:include_blank => true}
+  .field
+    = f.label :name, "アイテム名"
+    .input
+      = f.text_field :name
+  .field
+    = f.label :account, "アカウント"
+    .input
+      = f.text_field :account
+  .field
+    = f.label :password, "パスワード"
+    .input
+      = f.text_field :password
+  .field
+    = f.label :url, "URL"
+    .input
+      = f.text_area :url, :rows => 3
+  .actions
+    = f.submit '保存'

@@ -1,0 +1,9 @@
+%h2
+  %span= @folder.name
+
+%div.innerContent
+
+  = render "items_list", {:items => @folder.items}
+  = render "new_item", {:item => @folder.items.new}
+
+  = link_to image_tag('/images/back.png'), folders_path, {:title => "一覧に戻る"}

@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Folder:
+  = @item.folder_id
+%p
+  %b Name:
+  = @item.name
+%p
+  %b Password:
+  = @item.decrypt_password
+%p
+  %b Account:
+  = @item.account
+%p
+  %b Url:
+  = @item.url
+
+= link_to 'Edit', edit_item_path(@item)
+\|
+= link_to 'Back', items_path
