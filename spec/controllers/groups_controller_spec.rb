@@ -15,11 +15,6 @@ describe GroupsController do
     end
 
     context "when the group saves successfully" do
-      it "sets a flash[:notice] message" do
-        post :create
-        flash[:notice].should eq("Group was successfully created.")
-      end
-
       it "redirects to the Group index" do
         post :create
         response.should redirect_to(:action => "index")
