@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(:version => 20110912082750) do
   end
 
   create_table "folders", :force => true do |t|
-    t.string   "name",                      :null => false
-    t.integer  "deleted",    :default => 0, :null => false
+    t.string   "name",                          :null => false
+    t.boolean  "deleted",    :default => false, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -42,19 +42,19 @@ ActiveRecord::Schema.define(:version => 20110912082750) do
   end
 
   create_table "groups", :force => true do |t|
-    t.string   "name",                      :null => false
-    t.integer  "deleted",    :default => 0, :null => false
+    t.string   "name",                          :null => false
+    t.boolean  "deleted",    :default => false, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "items", :force => true do |t|
-    t.integer  "folder_id",                         :null => false
-    t.string   "name",                              :null => false
+    t.integer  "folder_id",                             :null => false
+    t.string   "name",                                  :null => false
     t.string   "account"
-    t.binary   "encrypted_password",                :null => false
+    t.binary   "encrypted_password",                    :null => false
     t.text     "url"
-    t.integer  "deleted",            :default => 0, :null => false
+    t.boolean  "deleted",            :default => false, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -74,12 +74,12 @@ ActiveRecord::Schema.define(:version => 20110912082750) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "login",                          :null => false
-    t.string   "hashed_password",                :null => false
-    t.string   "salt",                           :null => false
-    t.string   "name",                           :null => false
+    t.string   "login",                              :null => false
+    t.string   "hashed_password",                    :null => false
+    t.string   "salt",                               :null => false
+    t.string   "name",                               :null => false
     t.integer  "role",            :default => 2
-    t.integer  "deleted",         :default => 0, :null => false
+    t.boolean  "deleted",         :default => false, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -2,7 +2,7 @@ class CreateFolders < ActiveRecord::Migration
   def self.up
     create_table :folders do |t|
       t.string :name, :null => false
-      t.integer :deleted, :default => false, :null => false
+      t.boolean :deleted, :default => false, :null => false
 
       t.timestamps
     end

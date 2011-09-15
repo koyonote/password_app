@@ -6,7 +6,7 @@ class CreateItems < ActiveRecord::Migration
       t.string :account
       t.binary :encrypted_password, :null => false
       t.text :url
-      t.integer :deleted, :default => false, :null => false
+      t.boolean :deleted, :default => false, :null => false
 
       t.timestamps
     end
