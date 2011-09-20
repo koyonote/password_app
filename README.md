@@ -10,7 +10,7 @@
     git clone git://github.com/koyonote/password_app.git
 
 
-2.config/database.yml.example をコピーして config/database.yml を作成、DB環境に合わせて編集
+2.config/database.yml.example をコピーして config/database.yml を作成. DB環境に合わせて編集
 
     cp config/database.yml.example config/database.yml
 
@@ -34,7 +34,7 @@
 
 ## Features
 ### 《ロール》
-各ユーザーには、下記3種類のロールのいずれかを与えます. ロールごとの権限は表に示したとおりです。
+各ユーザーには、下記3種類のロールのいずれかを与えます. ロールごとの権限は表に示したとおりです.
 
 #### 1. admin
 <table>
