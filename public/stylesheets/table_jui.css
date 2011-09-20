@@ -131,10 +131,18 @@ table.display thead th div.DataTables_sort_wrapper span {
   float: left;
 }
 
+.dataTables_length label select {
+  height: 10px;
+}
+
 .dataTables_filter {
   width: 50%;
   float: right;
   text-align: right;
+}
+
+.dataTables_filter label input {
+  height: 15px;
 }
 
 .dataTables_info {
