@@ -32,8 +32,6 @@
     login: foo
     password: bar
 
-### 《Heroku》
-
 ## Features
 ### 《ロール》
 各ユーザーには、下記3種類のロールのいずれかを与えます. ロールごとの権限は表に示したとおりです。
@@ -137,4 +135,17 @@
   <td align="center">○</td>
 </tr>
 </table>
+
+## Demo
+[Launch Demo](http://password-app.heroku.com/login "Demo")
+
+#### manager
+
+    login: demo-manager
+    password: demo
+
+#### employee
+
+    login: demo-employee
+    password: demo
 
