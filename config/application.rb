@@ -32,7 +32,7 @@ module PasswordApp
     config.i18n.default_locale = :ja
 
     # JavaScript files you want as :defaults (application.js is always included).
-    config.action_view.javascript_expansions[:defaults] = %w(jquery jquery_ujs jquery-ui.min jquery.dataTables.min jquery.cookie jquery.checkboxtree)
+    config.action_view.javascript_expansions[:defaults] = %w(jquery jquery_ujs jquery-ui.min jquery.dataTables.min jquery.cookie jquery.checkboxtree jquery.tooltip.min)
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"

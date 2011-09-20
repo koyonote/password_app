@@ -25,10 +25,10 @@
     = f.label :role, "ロール"
     .input
       = f.radio_button "role", 0
-      システム管理者
+      admin
       = f.radio_button "role", 1
-      マネージャー以上
+      manager
       = f.radio_button "role", 2
-      社員・その他
+      employee
   .actions
     = f.submit 'Save'

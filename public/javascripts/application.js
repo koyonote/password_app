@@ -12,4 +12,7 @@ $.fn.disableOnSubmit = function(disableList){
 
 $(function(){
   $('form').disableOnSubmit(); // 全てのformに作用させる場合
+  $("#navi a").tooltip({
+    showURL: false
+  });
 });

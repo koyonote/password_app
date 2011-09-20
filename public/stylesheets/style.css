@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  font-family: "lucida grande",tahoma,verdana,arial,'Hiragino Kaku Gothic Pro',Meiryo,'MS PGothic',sans-serif;
+  font-family: "メイリオ","Meiryo",verdana,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
   font-size: 13px;
   overflow-y: scroll;
 }
@@ -43,7 +43,7 @@ a:hover {
 }
 
 #header {
-  width: 780px;
+  width: 770px;
   height: 30px;
   padding-top: 10px;
   margin: 0 auto;
@@ -61,7 +61,7 @@ a:hover {
 
 h1#logo {
   float: left;
-  width: 90px;
+  width: 120px;
 }
 
 h1#logo a {
@@ -162,7 +162,12 @@ h1#logo a {
 
 #loginForm .field {
   font-size: 11px;
+  color: #555555;
   margin-bottom: 12px;
+}
+
+#loginForm .field label {
+  font-size: 13px;
 }
 
 #loginForm .field label {
@@ -181,10 +186,10 @@ h1#logo a {
 }
 
 #content h2 {
-  padding: 4px;
-  display: inline;
-  font-size: 16px;
   font-weight: bold;
+  display: inline;
+  font-size: 17px;
+  color: #555555;
   border-bottom: 3px solid #ff33cc;
 }
 
