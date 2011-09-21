@@ -19,7 +19,7 @@
         Google    account   password
         Facebook  account   password
 
-* フォルダはツリーではなくフラット構造
+* フォルダはツリー構造ではなくフラット構造
 
 ![flat structure](https://github.com/koyonote/password_app/raw/master/screenshot/tree-flat.jpg "tree flat")
 
@@ -27,7 +27,10 @@
 
 ![folder items](https://github.com/koyonote/password_app/raw/master/screenshot/folder_items.jpg "folder items")
 
-* あるフォルダへの閲覧権限は、1. グループ、2. ユーザー、3. グループとユーザーの組み合わせ、によってフィルタを掛けられる
+* フォルダの閲覧は、1. グループ、2. ユーザー、3. グループとユーザーの組み合わせ、によってフィルタを掛けられる
+
+![filter](https://github.com/koyonote/password_app/raw/master/screenshot/filter.jpg "filter")
+
 * パスワードの暗号化には AES-256 を使用
 
 ####2. グループとユーザー
