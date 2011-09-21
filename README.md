@@ -9,6 +9,10 @@
 * パスワードを暗号化してデータベースに保存したい
 * できるだけシンプルなシステムを使いたい
 
+## Overview
+
+![overview](https://github.com/koyonote/password_app/raw/master/screenshot/overview.png "overview")
+
 ## Features
 ####1. フォルダとアイテム
 
