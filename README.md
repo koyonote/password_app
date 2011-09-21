@@ -34,10 +34,13 @@
 * フォルダと同様に、グループもフラット構造
 * ユーザーは複数のグループに属することができる
 
-![flat structure](https://github.com/koyonote/password_app/raw/master/screenshot/user_group.jpg "tree flat")
+![user group](https://github.com/koyonote/password_app/raw/master/screenshot/user_group.jpg "user group")
 
 * グループは必要なだけ作ることができ、フォルダにフィルタを掛ける際に威力を発揮する
 * 各ユーザーは、3種のロールによって権限が異なる（詳しくは、Roles を参照下さい）
+
+![user pyramid](https://github.com/koyonote/password_app/raw/master/screenshot/pyramid.jpg "user pyramid")
+
 
 ## Roles
 各ユーザーには、下記3種類のロールのいずれかを与えます. ロールごとの権限を表に示します.
