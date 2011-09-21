@@ -12,9 +12,21 @@
 ## Features
 ####1. フォルダとアイテム
 
+* アイテムとは、アカウントとパスワードをセットにしたもの
+
+        アイテム名  アカウント  パスワード
+        --------------------------------
+        Google    account   password
+        Facebook  account   password
+
 * フォルダはツリーではなくフラット構造
-![flat structure](/screenshot/tree-flat.jpg "tree flat")
-* 1つのフォルダ以下に、アイテムを必要なだけ入れていくイメージ 
+
+![flat structure](https://github.com/koyonote/password_app/raw/master/screenshot/tree-flat.jpg "tree flat")
+
+* 1つのフォルダ以下に、アイテムを必要なだけ入れていくイメージ
+
+![folder items](https://github.com/koyonote/password_app/raw/master/screenshot/folder_items.jpg "folder items")
+
 * あるフォルダへの閲覧権限は、1. グループ、2. ユーザー、3. グループとユーザーの組み合わせ、によってフィルタを掛けられる
 * パスワードの暗号化には AES-256 を使用
 
@@ -98,5 +110,4 @@
 
     login: foo
     password: bar
-
 
