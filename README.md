@@ -58,12 +58,12 @@
 ![newitem](https://github.com/koyonote/password_app/raw/master/screenshot/newitem.png "newitem")
 
 ## Features
-####1. グループ
+###1. グループ
 
 * グループは階層ではなくフラットな構造
 * グループは必要なだけ作ることができ、フォルダにフィルタを掛ける際に威力を発揮する
 
-####2. ユーザー
+###2. ユーザー
 
 * ユーザーは複数のグループに属することができる
 
@@ -73,9 +73,9 @@
 
 ![user pyramid](https://github.com/koyonote/password_app/raw/master/screenshot/pyramid.jpg "user pyramid")
 
-####3. ロール
+###3. ロール
 
-##### 1. admin
+#### 1. admin
 
                作成    編集    削除
     ------------------------------
@@ -84,7 +84,7 @@
     フォルダ     +       +      +
     アイテム     +       +      +
 
-##### 2. manager
+#### 2. manager
 
                作成    編集    削除
     ------------------------------
@@ -93,7 +93,7 @@
     フォルダ     +       +      +
     アイテム     +       +      +
 
-##### 3. emmployee
+#### 3. emmployee
 
                作成    編集    削除
     ------------------------------
